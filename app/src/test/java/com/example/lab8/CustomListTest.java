@@ -44,8 +44,8 @@ public class CustomListTest {
         City city1 = new City("New York", "New York");
         City city2 = new City("Los Angeles", "California");
 
-        cityList.add(city1);
-        cityList.add(city2);
+        cityList.addCity(city1);
+        cityList.addCity(city2);
 
         assertTrue(cityList.hasCity(city1)); // City1 should be in the list
         assertTrue(cityList.hasCity(city2)); // City2 should be in the list
