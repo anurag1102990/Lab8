@@ -53,33 +53,33 @@ public class CustomListTest {
         assertFalse(cityList.hasCity(new City("Chicago", "Illinois"))); // City not in the list
     }
 
-//    @Test
-//    public void testDelete() {
-//        CustomList cityList = new CustomList(null, new ArrayList<>());
-//        City city1 = new City("San Francisco", "California");
-//        City city2 = new City("Seattle", "Washington");
-//
-//        cityList.addCity(city1);
-//        cityList.addCity(city2);
-//
-//        assertTrue(cityList.hasCity(city1)); // City1 should be in the list
-//
-//        // Delete city1
-//        cityList.delete(city1);
-//
-//        assertFalse(cityList.hasCity(city1)); // City1 should no longer be in the list
-//        assertEquals(1, cityList.getCount()); // There should be only 1 city left
-//
-//        // Try to delete city1 again, it should throw an exception
-//        assertThrows(IllegalArgumentException.class, () -> {
-//            cityList.delete(city1);
-//        });
-//
-//        // Try to delete a city not in the list, it should throw an exception
-//        assertThrows(IllegalArgumentException.class, () -> {
-//            cityList.delete(new City("Chicago", "Illinois"));
-//        });
-//    }
+    @Test
+    public void testDelete() {
+        CustomList cityList = new CustomList(null, new ArrayList<>());
+        City city1 = new City("San Francisco", "California");
+        City city2 = new City("Seattle", "Washington");
+
+        cityList.addCity(city1);
+        cityList.addCity(city2);
+
+        assertTrue(cityList.hasCity(city1)); // City1 should be in the list
+
+        // Delete city1
+        cityList.delete(city1);
+
+        assertFalse(cityList.hasCity(city1)); // City1 should no longer be in the list
+        assertEquals(1, cityList.getCount()); // There should be only 1 city left
+
+        // Try to delete city1 again, it should throw an exception
+        assertThrows(IllegalArgumentException.class, () -> {
+            cityList.delete(city1);
+        });
+
+        // Try to delete a city not in the list, it should throw an exception
+        assertThrows(IllegalArgumentException.class, () -> {
+            cityList.delete(new City("Chicago", "Illinois"));
+        });
+    }
 
     @Test
     public void testCountCities() {
